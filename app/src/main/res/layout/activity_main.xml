@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.android.genralquiz.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/eda"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textAllCaps="true"
+            style="@style/customStyle"/>
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="textCapWords"
+            style="@style/customStyle"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dde">
+
+
+            <TextView
+                android:id="@+id/quas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF6D00"
+                android:text="@string/quas"
+                style="@style/customStyle"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation= "horizontal"
+                android:id="@+id/radio_land"
+                android:layout_below="@id/quas">
+                <RadioButton
+                    android:id="@+id/land1"
+                    android:layout_width= "wrap_content"
+                    android:layout_height= "wrap_content"
+                    android:text= "@string/ans"
+                    android:textColor="@color/lite_green"
+                    android:textAllCaps="true"
+                    android:background="@color/back_grnd"
+                    android:paddingStart="@dimen/start"
+                    android:textSize="@dimen/size"
+                    android:paddingEnd="@dimen/end"
+                    android:onClick="oneSelect"
+                    />
+                <RadioButton
+                    android:id="@+id/land2"
+                    android:layout_width= "wrap_content"
+                    android:layout_height= "wrap_content"
+                    android:text= "@string/ans1"
+                    android:textColor="@color/lite_green"
+                    android:background="@color/back_grnd"
+                    android:paddingStart="@dimen/start"
+                    android:textSize="@dimen/size"
+                    android:paddingEnd="@dimen/end"
+                    android:onClick="twoSelect"
+                    />
+                <RadioButton
+                    android:id="@+id/land3"
+                    android:layout_width= "wrap_content"
+                    android:layout_height= "wrap_content"
+                    android:text= "@string/ans2"
+                    android:textAllCaps="true"
+                    android:textColor="@color/lite_green"
+                    android:background="@color/back_grnd"
+                    android:paddingStart="@dimen/start"
+                    android:textSize="@dimen/size"
+                    android:paddingEnd="@dimen/end"
+                    android:onClick="threeSelect"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/quas2"
+                style="@style/customStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_land"
+                android:layout_marginTop="@dimen/marginT"
+                android:textColor="@color/text1"
+                android:background="@color/lite_green"
+                android:text="@string/quas2" />
+            <CheckBox
+                android:layout_below="@id/quas2"
+                android:id="@+id/watr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answ"
+                android:textColor="@color/lite_green"
+                android:background="@color/back_grnd"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"/>
+
+            <CheckBox
+                android:layout_below="@id/watr1"
+                android:id="@+id/watr2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answ1"
+                android:textColor="@color/lite_green"
+                android:background="@color/back_grnd"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"/>
+
+            <CheckBox
+                android:id="@+id/watr3"
+                android:layout_below="@id/watr2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answ2"
+                android:textColor="@color/lite_green"
+                android:background="@color/back_grnd"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"/>
+            <CheckBox
+                android:id="@+id/watr4"
+                android:layout_below="@id/watr3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answ3"
+                android:textColor="@color/lite_green"
+                android:background="@color/back_grnd"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"
+               />
+            <CheckBox
+                android:id="@+id/watr5"
+                android:layout_below="@id/watr4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answ4"
+                android:textColor="@color/lite_green"
+                android:background="@color/back_grnd"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sub"
+                android:onClick="onClick"
+                android:layout_below="@id/watr5"
+                android:id="@+id/sub2"/>
+
+        </RelativeLayout>
+        <TextView
+
+            android:id="@+id/quas5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question3"
+            style="@style/customStyle" />
+        <RadioGroup
+            android:id="@+id/radio_te"
+            android:layout_width= "wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation= "horizontal">
+
+        <RadioButton
+            android:id="@+id/bal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anss"
+            android:textColor="#eee"
+            android:textAllCaps="true"
+            android:paddingStart="@dimen/start1"
+            android:paddingEnd="@dimen/start1"
+            android:paddingTop="@dimen/start1"
+            android:textSize="@dimen/size2"
+            android:paddingBottom="@dimen/start1"
+            android:onClick="selectOnc"/>
+        <RadioButton
+            android:id="@+id/bal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anss1"
+            android:textColor="#eee"
+            android:textAllCaps="true"
+            android:paddingStart="@dimen/start1"
+            android:paddingEnd="@dimen/start1"
+            android:paddingTop="@dimen/start1"
+            android:textSize="@dimen/size2"
+            android:paddingBottom="@dimen/start1"
+            android:onClick="selectOnce"/>
+        <RadioButton
+            android:id="@+id/bal3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anss2"
+            android:textColor="#eee"
+            android:textAllCaps="true"
+            android:paddingStart="@dimen/start1"
+            android:paddingEnd="@dimen/start1"
+            android:paddingTop="@dimen/start1"
+            android:textSize="@dimen/size3"
+            android:paddingBottom="@dimen/start1"
+            android:onClick="selectOnca"/>
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hight_pic"
+            android:src="@drawable/wer" />
+        <TextView
+            android:id="@+id/quas6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quas6"
+            android:textColor="@color/lite_green"
+            style="@style/customStyle"/>
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/anssw"
+            android:inputType="textCapWords"
+            style="@style/customStyle" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sub"
+            android:onClick="thirdSelect"
+            android:id="@+id/sub6"/>
+          <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+              <ImageView
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/efd"
+                  style="@style/customStyle"
+                  android:id="@+id/lion"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/quas7"
+                  style="@style/customStyle"
+                  android:id="@+id/quas7"
+                  android:layout_below="@id/lion"/>
+              <RadioGroup
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation= "horizontal"
+                  android:id="@+id/radio_land1"
+                  android:layout_below="@id/quas7">
+
+                  <RadioButton
+                      android:id="@+id/lion1"
+                      android:layout_width= "wrap_content"
+                      android:layout_height= "wrap_content"
+                      android:text= "@string/answee"
+                      android:textColor="@color/grnd2"
+                      android:background="@color/back_grnd"
+                      android:paddingStart="@dimen/start"
+                      android:paddingEnd="@dimen/end"
+                      android:paddingTop="@dimen/top"
+                      android:textSize="@dimen/size1"
+                      android:onClick="selectOnce0"/>
+
+                  <RadioButton
+                      android:id="@+id/lion2"
+                      android:layout_width= "wrap_content"
+                      android:layout_height= "wrap_content"
+                      android:text= "@string/answee1"
+                      android:textColor="@color/grnd2"
+                      android:background="@color/back_grnd"
+                      android:paddingStart="@dimen/start"
+                      android:paddingEnd="@dimen/end"
+                      android:paddingTop="@dimen/top"
+                      android:textSize="@dimen/size1"
+                      android:onClick="selectOnce1"/>
+                  <RadioButton
+                      android:id="@+id/lion3"
+                      android:layout_width= "wrap_content"
+                      android:layout_height= "wrap_content"
+                      android:text= "@string/answee2"
+                      android:textColor="@color/grnd2"
+                      android:background="@color/back_grnd"
+                      android:paddingStart="@dimen/start"
+                      android:paddingEnd="@dimen/end"
+                      android:paddingTop="@dimen/top"
+                      android:textSize="@dimen/size1"
+                      android:onClick="selectOnce2" />
+              </RadioGroup>
+          </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nbg"
+            android:id="@+id/brdg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quas8"
+            style="@style/customStyle"
+            android:textColor="@color/text2"
+            android:background="@color/grnd2"
+            android:id="@+id/quas8"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation= "vertical"
+            android:id="@+id/brdge">
+
+            <RadioButton
+                android:id="@+id/brdge1"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/answw"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:onClick="selectTow"
+                />
+            <RadioButton
+                android:id="@+id/brdge2"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/answw1"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:onClick="selectTow1" />
+            <RadioButton
+                android:id="@+id/brdge3"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/answw2"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:onClick="selectTow3" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/geo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hight2"
+            android:src="@drawable/cvvf" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quas9"
+            style="@style/customStyle"
+            android:textColor="@color/text2"
+            android:background="@color/grnd2"
+            android:id="@+id/quas9"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation= "vertical"
+            android:id="@+id/radio_land2">
+            <RadioButton
+                android:id="@+id/geo1"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/answerr"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:onClick="selectThree"/>
+            <RadioButton
+                android:id="@+id/geo2"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/answerr1"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:onClick="selectThree1"/>
+            <RadioButton
+                android:id="@+id/geo3"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/answerr2"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:onClick="selectThree2"/>
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/country"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hight3"
+            android:src="@drawable/sdf" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quas10"
+            style="@style/customStyle"
+            android:textColor="@color/text2"
+            android:background="@color/grnd2"
+            android:id="@+id/count"/>
+        <CheckBox
+            android:id="@+id/coun1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aans"
+            android:textColor="#eee"
+            android:textAllCaps="true"
+            android:paddingStart="@dimen/start"
+            android:paddingEnd="@dimen/end"
+            android:paddingTop="@dimen/top"
+            android:textSize="@dimen/size1"
+            android:paddingBottom="@dimen/buttom"
+            />
+        <CheckBox
+            android:id="@+id/coun2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aans1"
+            android:textColor="#eee"
+            android:textAllCaps="true"
+            android:paddingStart="@dimen/start"
+            android:paddingEnd="@dimen/end"
+            android:paddingTop="@dimen/top"
+            android:textSize="@dimen/size1"
+            android:paddingBottom="@dimen/buttom"
+            />
+        <CheckBox
+
+            android:id="@+id/coun3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aans2"
+            android:textColor="#eee"
+            android:textAllCaps="true"
+            android:paddingStart="@dimen/start"
+            android:paddingEnd="@dimen/end"
+            android:paddingTop="@dimen/top"
+            android:textSize="@dimen/size1"
+            android:paddingBottom="@dimen/buttom"
+           />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sub"
+            android:onClick="forthSelect"
+            android:id="@+id/sub10"
+            android:layout_gravity="center_horizontal"/>
+
+        <ImageView
+            android:id="@+id/venus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hight4"
+            android:src="@drawable/sswe" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quas11"
+            style="@style/customStyle"
+            android:textColor="@color/text2"
+            android:background="@color/grnd2"
+            android:id="@+id/quas11"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation= "vertical"
+            android:id="@+id/radio_land3">
+            <RadioButton
+                android:id="@+id/venus1"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/anns"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"
+                android:onClick="selectFour" />
+            <RadioButton
+                android:id="@+id/venus2"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/anns1"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"
+                android:onClick="selectFour1"/>
+            <RadioButton
+                android:id="@+id/venus3"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/anns2"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"
+                android:onClick="selectFour2"/>
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hight5"
+            android:src="@drawable/egf"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quas12"
+            android:textColor="@color/text2"
+            android:background="@color/grnd2"
+            style="@style/customStyle"
+            android:id="@+id/quas12"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation= "vertical"
+            android:id="@+id/radio_land4">
+
+            <RadioButton
+                android:id="@+id/con1"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/aanns"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"
+                android:onClick="selectFive" />
+            <RadioButton
+                android:id="@+id/con2"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/aanns1"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"
+                android:onClick="selectFive1"/>
+            <RadioButton
+                android:id="@+id/con3"
+                android:layout_width= "wrap_content"
+                android:layout_height= "wrap_content"
+                android:text= "@string/aanns2"
+                android:textColor="@color/grnd2"
+                android:paddingStart="@dimen/start"
+                android:paddingEnd="@dimen/end"
+                android:paddingTop="@dimen/top"
+                android:textSize="@dimen/size1"
+                android:paddingBottom="@dimen/buttom"
+                android:onClick="selectFive2"/>
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result"
+            android:onClick="finalResult"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</ScrollView>

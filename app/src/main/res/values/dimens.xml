@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="start">12dp</dimen>
+    <dimen name="end">12dp</dimen>
+    <dimen name="size">20sp</dimen>
+    <dimen name="size1">16sp</dimen>
+    <dimen name="top">12dp</dimen>
+    <dimen name="buttom">12dp</dimen>
+    <dimen name="marginT">16dp</dimen>
+    <dimen name="start1">8dp</dimen>
+    <dimen name="size2">10sp</dimen>
+    <dimen name="size3">8sp</dimen>
+    <dimen name="hight_pic">244dp</dimen>
+    <dimen name="hight2">226dp</dimen>
+    <dimen name="hight3">323dp</dimen>
+    <dimen name="hight4">268dp</dimen>
+    <dimen name="hight5">336dp</dimen>
+</resources>
